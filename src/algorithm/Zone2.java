@@ -9,7 +9,7 @@ public class Zone2 extends Zone {
      * Each partner that is chosen is also updated with the main person as one of it's partners at zone2.
      * @param person The main person.
      * @param population The population.
-     * @param index The index of person in the population. Important for to reduce runtime.
+     * @param index The index of person in the population. Important to reduce runtime.
      * @param size The size of the group.
      */
     public Zone2(Person person, Population population, int index, int size) {
