@@ -3,7 +3,7 @@ package algorithm;
 import java.util.ArrayList;
 import java.util.Random;
 
-public abstract class Zone {
+public class Zone {
 
     protected ArrayList<Person> group;
     protected boolean full;

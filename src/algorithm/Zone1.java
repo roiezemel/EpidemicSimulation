@@ -2,8 +2,6 @@ package algorithm;
 
 public class Zone1 extends Zone {
 
-    public static final int MEETING_TIME = 3;
-
     /**
      * Create a zone1 for a given person.
      * @param person The main person of the group.

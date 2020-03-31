@@ -2,8 +2,6 @@ package algorithm;
 
 public class Zone2 extends Zone {
 
-    public static final int MEETING_TIME = 2;
-
     /**
      * Finds random partners for zone2.
      * Each partner that is chosen is also updated with the main person as one of it's partners at zone2.

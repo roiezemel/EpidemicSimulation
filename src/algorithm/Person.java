@@ -1,18 +1,18 @@
 package algorithm;
 
-import java.util.Hashtable;
+import java.util.HashMap;
 
 public class Person {
 
     private Zone1 zone1;
     private Zone2 zone2;
-    private Hashtable<String, Double> factors;
+    private HashMap<String, Double> factors;
 
     /**
      * Initialize lonely person.
      * @param factors Table of factors.
      */
-    public Person(Hashtable<String, Double> factors) {
+    public Person(HashMap<String, Double> factors) {
         this.factors = factors;
     }
 
@@ -22,7 +22,7 @@ public class Person {
      * @param zone1
      * @param zone2
      */
-    public Person(Hashtable<String, Double> factors, Zone1 zone1, Zone2 zone2) {
+    public Person(HashMap<String, Double> factors, Zone1 zone1, Zone2 zone2) {
         this.factors = factors;
         this.zone1 = zone1;
         this.zone2 = zone2;
@@ -45,7 +45,7 @@ public class Person {
     /**
      * @return table of factors.
      */
-    public Hashtable<String, Double> getFactors() {
+    public HashMap<String, Double> getFactors() {
         return factors;
     }
 
