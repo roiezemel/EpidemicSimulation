@@ -13,6 +13,10 @@ public class Zone1 extends Zone {
                 this.group.add(p);
             }
         }
-        this.full = true;
+    }
+
+    @Override
+    protected String getKey() {
+        return "zone1";
     }
 }

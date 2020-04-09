@@ -3,18 +3,23 @@ package algorithm;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Zone {
+public abstract class Zone {
 
     protected ArrayList<Person> group;
-    protected boolean full;
+    private int capacity;
 
     /**
      * Initialize zone.
      */
     public Zone() {
         this.group = new ArrayList<>();
-        this.full = false;
     }
+
+    /**
+     * Get the key name of the zone.
+     * @return key name.
+     */
+    protected abstract String getKey();
 
     /**
      * Get zone's group.
@@ -29,6 +34,8 @@ public class Zone {
      * @return Random person from group.
      */
     public Person pickPartner() {
+        if (group.isEmpty())
+            return null;
         return group.get(new Random().nextInt(group.size()));
     }
 
@@ -41,11 +48,19 @@ public class Zone {
     }
 
     /**
-     * Is the group full.
-     * @return true if the group is full, false if not.
+     * Get the key name of the time factor.
+     * @return key + ' time'
      */
-    public boolean isFull() {
-        return full;
+    public String getTimeKey() {
+        return getKey() + " time";
+    }
+
+    /**
+     * Get the key name of the chance factor.
+     * @return key
+     */
+    public String getChanceKey() {
+        return getKey();
     }
 
     /**
@@ -55,6 +70,22 @@ public class Zone {
      */
     public boolean inZone(Person person) {
         return group.contains(person);
+    }
+
+    /**
+     * Get the capacity of the zone.
+     * @return
+     */
+    public int getCapacity() {
+        return capacity;
+    }
+
+    /**
+     * Set capacity of the zone.
+     * @param capacity
+     */
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
     }
 
 }

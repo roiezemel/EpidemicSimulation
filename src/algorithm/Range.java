@@ -18,14 +18,14 @@ public class Range {
         }
 
         this.min = min;
-        this.min = max;
+        this.max = max;
     }
 
     /**
      * Get a random integer in the range. min and max are inclusive.
      * @return
      */
-    private int random() {
+    public int random() {
         return new Random().nextInt((max - min) + 1) + min;
     }
 
